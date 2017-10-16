@@ -1,0 +1,26 @@
+{
+    "name": "gaecamp/simpleframework",
+    "type": "framework",
+    "description": "Simple PHP Framework, MVC Style",
+    "keywords": ["framework", "php", "mvc"],
+    "authors": [
+        {
+            "name": "gaetano campanella",
+            "email": "gaetanocampanella@MBPdigaetano2.lan"
+        }
+    ],
+    "require": {
+        "phroute/phroute":"v2.1.0",
+        "twig/twig":"v2.4.4",
+        "twitter/bootstrap":"v3.3.7",
+        "monolog/monolog":"v1.23.0",
+        "nette/caching":"v2.5.6",
+        "dompdf/dompdf":"v0.8.1",
+        "illuminate/http":"v5.5.2",
+        "siriusphp/validation":"2.2.0",
+        "aura/sqlquery":"2.7.1",
+        "box/spout":"v2.7.3",
+        "bramus/monolog-colored-line-formatter":"2.0.3",
+        "bobthecow/faker":"dev-master"
+    }
+}
