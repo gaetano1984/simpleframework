@@ -1,0 +1,4 @@
+#dipendenze varie
+public/node_modules/
+vendor/
+composer.lock
