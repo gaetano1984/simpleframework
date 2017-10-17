@@ -32,6 +32,11 @@
         "bobthecow/faker":"dev-master"
     },
     "scripts":{
+        "post-create-project":[
+            "mkdir -p ./storage/logs"
+            ,"mkdir -p ./storage/cache"
+            ,"mkdir -p ./storage/export"
+        ],
         "post-update-cmd":[
             "mkdir -p ./storage/logs"
             ,"mkdir -p ./storage/cache"
