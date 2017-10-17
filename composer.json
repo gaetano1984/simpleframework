@@ -9,6 +9,12 @@
             "email": "gaetanocampanella@MBPdigaetano2.lan"
         }
     ],
+    "repositories":[
+        {
+            "type":"vcs"
+            ,"url":"https://github.com/gaetano1984/simpleframework"
+        }
+    ],
     "require": {
         "phroute/phroute":"v2.1.0",
         "twig/twig":"v2.4.4",
