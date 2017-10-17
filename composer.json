@@ -32,7 +32,7 @@
         "bobthecow/faker":"dev-master"
     },
     "scripts":{
-        "post-create-project":[
+        "post-create-project-cmd":[
             "mkdir -p ./storage/logs"
             ,"mkdir -p ./storage/cache"
             ,"mkdir -p ./storage/export"
