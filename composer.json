@@ -32,15 +32,25 @@
         "bobthecow/faker":"dev-master"
     },
     "scripts":{
+        "post-update-cmd":[
+            "mkdir -p ./storage/logs"
+            ,"mkdir -p ./storage/cache"
+            ,"mkdir -p ./storage/export"
+        ],
+        "post-package-install":[
+            "mkdir -p ./storage/logs"
+            ,"mkdir -p ./storage/cache"
+            ,"mkdir -p ./storage/export"
+        ],
+        "post-install-cmd":[
+            "mkdir -p ./storage/logs"
+            ,"mkdir -p ./storage/cache"
+            ,"mkdir -p ./storage/export"
+        ],
         "post-create-project-cmd":[
             "mkdir -p ./storage/logs"
             ,"mkdir -p ./storage/cache"
             ,"mkdir -p ./storage/export"
         ],
-        "post-update-cmd":[
-            "mkdir -p ./storage/logs"
-            ,"mkdir -p ./storage/cache"
-            ,"mkdir -p ./storage/export"
-        ]   
     }
 }
