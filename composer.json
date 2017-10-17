@@ -51,6 +51,6 @@
             "mkdir -p ./storage/logs"
             ,"mkdir -p ./storage/cache"
             ,"mkdir -p ./storage/export"
-        ],
+        ]
     }
 }
