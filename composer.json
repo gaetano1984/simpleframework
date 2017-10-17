@@ -31,14 +31,11 @@
     "require-dev":{
         "bobthecow/faker":"dev-master"
     },
-    "post-install-cmd": [
-        "sudo mkdir -p ./storage/logs",
-        "sudo mkdir -p ./storage/cache",
-        "sudo mkdir -p ./storage/export"
-    ],
-    "post-create-project-cmd": [
-        "sudo mkdir -p ./storage/logs",
-        "sudo mkdir -p ./storage/cache",
-        "sudo mkdir -p ./storage/export"
-    ],
+    "scripts":{
+        "post-update-cmd":[
+            "mkdir -p ./storage/logs"
+            ,"mkdir -p ./storage/cache"
+            ,"mkdir -p ./storage/export"
+        ]   
+    }
 }
