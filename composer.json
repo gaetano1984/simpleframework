@@ -30,5 +30,15 @@
     },
     "require-dev":{
         "bobthecow/faker":"dev-master"
-    }
+    },
+    "post-install-cmd": [
+        "sudo mkdir -p ./storage/logs",
+        "sudo mkdir -p ./storage/cache",
+        "sudo mkdir -p ./storage/export"
+    ],
+    "post-create-project-cmd": [
+        "sudo mkdir -p ./storage/logs",
+        "sudo mkdir -p ./storage/cache",
+        "sudo mkdir -p ./storage/export"
+    ],
 }
