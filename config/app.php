@@ -21,6 +21,7 @@
 			$this->pdf = $this->setPdf();
 			$this->excel = $this->setExcel();
 			$this->includeAll('./app');
+			$this->setEnv();
 		}
 		public function setTwig(){
 			global $twig_config;
@@ -83,7 +84,7 @@
 			}
 		}
 		public function setEnv(){
-			$env = new Dotenv('.env');
+			$env = new Dotenv('.');
 			$env->load();
 		}
 	}
