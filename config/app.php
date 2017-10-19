@@ -11,6 +11,7 @@
 	use Box\Spout\Writer\WriterFactory;
 	use Box\Spout\Common\Type;
 	use Bramus\Monolog\Formatter\ColoredLineFormatter;
+	use Dotenv\Dotenv;
 
 	class Config{
 		public function __construct(){
@@ -80,6 +81,10 @@
 					require_once($file);
 				}
 			}
+		}
+		public function setEnv(){
+			$env = new Dotenv('.env');
+			$env->load();
 		}
 	}
 

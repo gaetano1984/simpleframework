@@ -26,7 +26,8 @@
         "siriusphp/validation":"2.2.0",
         "aura/sqlquery":"2.7.1",
         "box/spout":"v2.7.3",
-        "bramus/monolog-colored-line-formatter":"2.0.3"
+        "bramus/monolog-colored-line-formatter":"2.0.3",
+        "vlucas/phpdotenv":"v2.4.0"
     },
     "require-dev":{
         "bobthecow/faker":"dev-master"
