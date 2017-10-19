@@ -14,18 +14,7 @@
 		public function list(){
 			global $app;
 			$app->log->general->info(date('Y-m-d H:i:s')." ".__CLASS__."=>".__FUNCTION__.": recupero la lista degli utenti");
-			$storage = new \Nette\Caching\Storages\FileStorage('./storage/cache/user_list');
-			$cache_user_list = new Cache($storage);
-			$app->log->general->info(date('Y-m-d H:i:s')." ".__CLASS__."=>".__FUNCTION__.": controllo la cache");
-			if($cache_user_list->load($storage)===null){
-				$app->log->general->info(date('Y-m-d H:i:s')." ".__CLASS__."=>".__FUNCTION__.": cache vuota, salvo i dati in cache");
-				$res = $this->repos->userList();
-				$cache_user_list->save($storage, $res);	
-			}
-			else{
-				$app->log->general->info(date('Y-m-d H:i:s')." ".__CLASS__."=>".__FUNCTION__.": cache piena, recupero i dati");
-				$res = $cache_user_list->load($storage);
-			}
+			$res = $this->repos->userList();
 			$app->log->general->info(date('Y-m-d H:i:s')." ".__CLASS__."=>".__FUNCTION__.": ".count($res)." utenti trovati");
 			$html =  $app->twig->load('user/list.php');
 			$app->log->general->info(date('Y-m-d H:i:s')." ".__CLASS__."=>".__FUNCTION__.": renderizzo il template");
