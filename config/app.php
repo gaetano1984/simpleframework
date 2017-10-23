@@ -1,8 +1,8 @@
 <?php
 
-	require_once('./config/twig.php');
-	require_once('./config/database.php');
-	require_once('./config/logger.php');
+	require_once('../config/twig.php');
+	require_once('../config/database.php');
+	require_once('../config/logger.php');
 
 	use Illuminate\Database\Capsule\Manager as Capsule;
 	use Monolog\Logger as Logger;
@@ -20,7 +20,7 @@
 			$this->log = $this->setLogger();
 			$this->pdf = $this->setPdf();
 			$this->excel = $this->setExcel();
-			$this->includeAll('./app');
+			$this->includeAll('../app');
 			$this->setEnv();
 		}
 		public function setTwig(){
@@ -84,7 +84,7 @@
 			}
 		}
 		public function setEnv(){
-			$env = new Dotenv('.');
+			$env = new Dotenv('../');
 			$env->load();
 		}
 	}

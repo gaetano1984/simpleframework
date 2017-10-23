@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^index.php/css/(.*)$ /css/$1
+RewriteRule ^index.php/script/(.*)$ /script/$1
+RewriteRule ^index.php/node_modules/(.*)$ /node_modules/$1
