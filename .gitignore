@@ -1,8 +1,8 @@
 #dipendenze varie
 public/node_modules/
-public/css
 vendor/
 composer.lock
 storage
 .env
 /nbproject/private/
+.DS_Store
