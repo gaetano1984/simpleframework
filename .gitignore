@@ -1,5 +1,6 @@
 #dipendenze varie
 public/node_modules/
+public/css/app.css
 vendor/
 composer.lock
 storage
