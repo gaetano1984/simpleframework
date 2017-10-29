@@ -1,5 +1,6 @@
 <?php
 
+	require_once('../config/functions.php');
 	require_once('../config/twig.php');
 	require_once('../config/database.php');
 	require_once('../config/logger.php');
