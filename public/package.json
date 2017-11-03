@@ -14,5 +14,7 @@
     ,"gulp":"3.9.1"
     ,"gulp-concat":"2.6.1"
     ,"gulp-clean-css":"3.9.0"
+    ,"minimatch":"3.0.2"
+    ,"graceful-fs":"^4.0.0"
   }
 }
