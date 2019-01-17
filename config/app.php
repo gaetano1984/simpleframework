@@ -1,10 +1,5 @@
 <?php
 
-	require_once('../config/functions.php');
-	require_once('../config/twig.php');
-	require_once('../config/database.php');
-	require_once('../config/logger.php');
-
 	use Illuminate\Database\Capsule\Manager as Capsule;
 	use Monolog\Logger as Logger;
 	use Monolog\Handler\StreamHandler;
@@ -15,14 +10,16 @@
 	use Dotenv\Dotenv;
 
 	class Config{
+
 		public function __construct(){
+			$this->setEnv();
+			$this->includeAll('../app');
+			$this->includeAll('../config');
 			$this->twig = $this->setTwig();
 			$this->db = $this->setDB();
 			$this->log = $this->setLogger();
 			$this->pdf = $this->setPdf();
 			$this->excel = $this->setExcel();
-			$this->includeAll('../app');
-			$this->setEnv();
 		}
 		public function setTwig(){
 			global $twig_config;
@@ -36,7 +33,7 @@
 			global $config_db;
 			try{
 				$dsn = 'mysql:dbname='.$config_db['database'].';host='.$config_db['host'];
-				$pdo = new \PDO($dsn, 'root', 'root');
+				$pdo = new \PDO($dsn, $config_db['username'], $config_db['password']);
 				return $pdo;
 			}
 			catch(PDOException $e){
@@ -85,7 +82,7 @@
 			}
 		}
 		public function setEnv(){
-			$env = new Dotenv('../');
+			$env = Dotenv::create('../');
 			$env->load();
 		}
 	}

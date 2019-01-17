@@ -2,13 +2,13 @@
 
 	global $config_db;
 
-	$config_db = [
-		'host' => getenvval('DBHOST', 'localhost')
-		,'username' => getenvval('DBUSERNAME', 'root')
-		,'password' => getenvval('DBPASSWORD', 'root')
-		,'database' => getenvval('DBDATABASE', 'test_db')
-		,'driver' => getenvval('DBDRIVER', 'mysql')
-		,'port' => getenvval('DBPORT', '8889')
-	];
+	$config_db = array(
+		'host' => getenv('DBHOST', 'localhost')
+		,'username' => getenv('DBUSERNAME')
+		,'password' => getenv('DBPASSWORD')
+		,'database' => getenv('DBDATABASE')
+		,'driver' => getenv('DBDRIVER')
+		,'port' => getenv('DBPORT')
+	);
 
 ?>
