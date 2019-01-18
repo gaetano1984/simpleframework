@@ -36,6 +36,10 @@
             "mkdir -p ./storage/logs"
             ,"mkdir -p ./storage/cache"
             ,"mkdir -p ./storage/export"
+            ,"composer install"
+        ]
+        ,"post-install-cmd":[
+            "mv .dev.env .env"
         ]
     }
 }
